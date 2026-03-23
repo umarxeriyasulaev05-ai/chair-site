@@ -3,57 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Стулья и пуфики</title>
-
-
+<title>Бенефит</title>
 
 <style>
 
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 margin:0;
-background:#f5f5f5;
+background:#f7f7f7;
+color:#222;
 }
 
+/* ВЕРХ САЙТА */
 header{
-background:#222;
-color:white;
+background:white;
+color:#111;
 text-align:center;
-padding:25px;
+padding:30px 20px;
+border-bottom:1px solid #ddd;
 }
 
+/* ГАЛЕРЕЯ */
 .gallery{
 width:90%;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 margin-top:30px;
 }
 
 .card{
 background:white;
-border-radius:10px;
+border-radius:12px;
 overflow:hidden;
-box-shadow:0 4px 12px rgba(0,0,0,0.15);
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
 cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }
 
 .card img{
 width:100%;
-height:250px;
+height:160px;
 object-fit:cover;
 }
 
-/* УВЕЛИЧЕННОЕ ФОТО */
-
+/* УВЕЛИЧЕНИЕ ФОТО */
 .lightbox{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.85);
 display:none;
 justify-content:center;
 align-items:center;
@@ -65,12 +72,14 @@ max-height:90%;
 border-radius:10px;
 }
 
+/* НИЗ САЙТА */
 footer{
-margin-top:40px;
-background:#222;
-color:white;
+margin-top:50px;
+background:#f1f1f1;
+color:#555;
 text-align:center;
 padding:20px;
+font-size:14px;
 }
 
 </style>
@@ -79,68 +88,83 @@ padding:20px;
 <body>
 
 <header>
-<h1>Бенефит</h1>
+<h1>Каталог мебельных стульев</h1>
 <p>Нажмите на фото чтобы увеличить</p>
 </header>
 
 <div class="gallery">
 
-<div class="card"><img src="chair1.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair2.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair3.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair4.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair5.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair6.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair7.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair8.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair9.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair10.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair11.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair12.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair13.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair14.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair15.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair16.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair17.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair18.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair19.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair20.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair21.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair22.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair23.jpg" onclick="openImg(this.src)"></div>
-<div class="card"><img src="chair24.jpg" onclick="openImg(this.src)"></div>
+<div class="card"><img src="chair1.jpg" loading="lazy" alt="Стул 1"></div>
+<div class="card"><img src="chair2.jpg" loading="lazy" alt="Стул 2"></div>
+<div class="card"><img src="chair3.jpg" loading="lazy" alt="Стул 3"></div>
+<div class="card"><img src="chair4.jpg" loading="lazy" alt="Стул 4"></div>
+<div class="card"><img src="chair5.jpg" loading="lazy" alt="Стул 5"></div>
+<div class="card"><img src="chair6.jpg" loading="lazy" alt="Стул 6"></div>
+<div class="card"><img src="chair7.jpg" loading="lazy" alt="Стул 7"></div>
+<div class="card"><img src="chair8.jpg" loading="lazy" alt="Стул 8"></div>
+<div class="card"><img src="chair9.jpg" loading="lazy" alt="Стул 9"></div>
+<div class="card"><img src="chair10.jpg" loading="lazy" alt="Стул 10"></div>
+<div class="card"><img src="chair11.jpg" loading="lazy" alt="Стул 11"></div>
+<div class="card"><img src="chair12.jpg" loading="lazy" alt="Стул 12"></div>
+<div class="card"><img src="chair13.jpg" loading="lazy" alt="Стул 13"></div>
+<div class="card"><img src="chair14.jpg" loading="lazy" alt="Стул 14"></div>
+<div class="card"><img src="chair15.jpg" loading="lazy" alt="Стул 15"></div>
+<div class="card"><img src="chair16.jpg" loading="lazy" alt="Стул 16"></div>
+<div class="card"><img src="chair17.jpg" loading="lazy" alt="Стул 17"></div>
+<div class="card"><img src="chair18.jpg" loading="lazy" alt="Стул 18"></div>
+<div class="card"><img src="chair19.jpg" loading="lazy" alt="Стул 19"></div>
+<div class="card"><img src="chair20.jpg" loading="lazy" alt="Стул 20"></div>
+<div class="card"><img src="chair21.jpg" loading="lazy" alt="Стул 21"></div>
+<div class="card"><img src="chair22.jpg" loading="lazy" alt="Стул 22"></div>
+<div class="card"><img src="chair23.jpg" loading="lazy" alt="Стул 23"></div>
+<div class="card"><img src="chair24.jpg" loading="lazy" alt="Стул 24"></div>
+<div class="card"><img src="chair25.jpg" loading="lazy" alt="Стул 25"></div>
+<div class="card"><img src="chair26.jpg" loading="lazy" alt="Стул 26"></div>
+<div class="card"><img src="chair27.jpg" loading="lazy" alt="Стул 27"></div>
+<div class="card"><img src="chair28.jpg" loading="lazy" alt="Стул 28"></div>
+<div class="card"><img src="chair29.jpg" loading="lazy" alt="Стул 29"></div>
+<div class="card"><img src="chair30.jpg" loading="lazy" alt="Стул 30"></div>
+<div class="card"><img src="chair31.jpg" loading="lazy" alt="Стул 31"></div>
+<div class="card"><img src="chair32.jpg" loading="lazy" alt="Стул 32"></div>
+<div class="card"><img src="chair33.jpg" loading="lazy" alt="Стул 33"></div>
 
 </div>
 
-<div class="lightbox" id="lightbox" onclick="closeImg()">
+<div class="lightbox" id="lightbox">
 <img id="bigImg">
 </div>
 
-<footer>
-<p>© 2026 Каталог мебели</p>
-</footer>
-
 <script>
 
-function openImg(src){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("bigImg").src=src;
-}
+const images =
+document.querySelectorAll(".card img");
+const lightbox = document.getElementById("lightbox");
+const bigImg = document.getElementById("bigImg");
 
-function closeImg(){
-document.getElementById("lightbox").style.display="none";
-}
+// открытие
+images.forEach(img=>{
+  img.addEventListener("click", ()=>{
+    lightbox.style.display = "flex";
+    bigImg.src = img.src;
+  });
+});
+
+// закрытие
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+});
 
 </script>
 
 </body>
 </html>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Контакты</title>
+<title>Для заказа просто напишите нам в WhatsApp</title>
 
 <style>
 body{
@@ -204,15 +228,15 @@ body{
 
 <div class="contact-card">
 
-<h2>Контакты</h2>
+<h2>Для заказа просто напишите нам в WhatsApp</h2>
 
-<p class="name"></p>
+<p class="name">Бенефит мебель</p>
 
-<a class="btn whatsapp" href="https://wa.me/79280612374" target="_blank">
+<a class="btn whatsapp" href="https://wa.me/79280612374; target="_blank">
 Написать в WhatsApp
 </a>
 
-<a class="btn instagram" href="https://instagram.com/benefit.official_234" target="_blank">
+<a class="btn instagram" href="https://instagram.com/benefit.official_234&quot; target="_blank">
 Instagram
 </a>
 
